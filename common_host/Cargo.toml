@@ -1,0 +1,13 @@
+[package]
+name = "common_host"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+door1 = { path = "../door1" }
+door2 = { path = "../door2" }
+door3 = { path = "../door3" }
+door4 = { path = "../door4" }
+door5 = { path = "../door5" }
