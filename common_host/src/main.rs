@@ -1,10 +1,14 @@
 use std::io;
+use std::fs;
 
 use door1;
 use door2;
 use door3;
 use door4;
 use door5;
+use door6;
+use door8;
+use door9;
 
 fn get_input(stdin: &io::Stdin) -> String
 {
@@ -24,6 +28,11 @@ fn get_input(stdin: &io::Stdin) -> String
         input.push_str(&line);
     }
     input
+}
+
+fn load_input_from_file(file: &str) -> String
+{
+    fs::read_to_string(file).unwrap()
 }
 
 fn main() {
@@ -92,6 +101,36 @@ fn main() {
         (5, 2) => {
             let input = get_input(&stdin);
             let result = door5::door_5_2(&input);
+            println!("Solution is {}", result);
+        }
+        (6, 1) => {
+            let input = load_input_from_file("../door6/input.txt");
+            let result = door6::door_6_1(&input);
+            println!("Solution is {}", result);
+        }
+        (6, 2) => {
+            let input = load_input_from_file("../door6/input.txt");
+            let result = door6::door_6_2(&input);
+            println!("Solution is {}", result);
+        }
+        (8, 1) => {
+            let input = load_input_from_file("../door8/input.txt");
+            let result = door8::door_8_1(&input);
+            println!("Solution is {}", result);
+        }
+        (8, 2) => {
+            let input = load_input_from_file("../door8/input.txt");
+            let result = door8::door_8_2(&input);
+            println!("Solution is {}", result);
+        }
+        (9, 1) => {
+            let input = load_input_from_file("../door9/input.txt");
+            let result = door9::door9_part_1(&input);
+            println!("Solution is {}", result);
+        }
+        (9, 2) => {
+            let input = load_input_from_file("../door9/input.txt");
+            let result = door9::door9_part_2(&input);
             println!("Solution is {}", result);
         }
         (_, _) => {

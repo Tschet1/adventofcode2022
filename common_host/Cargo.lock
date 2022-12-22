@@ -11,6 +11,9 @@ dependencies = [
  "door3",
  "door4",
  "door5",
+ "door6",
+ "door8",
+ "door9",
 ]
 
 [[package]]
@@ -31,4 +34,16 @@ version = "0.1.0"
 
 [[package]]
 name = "door5"
+version = "0.1.0"
+
+[[package]]
+name = "door6"
+version = "0.1.0"
+
+[[package]]
+name = "door8"
+version = "0.1.0"
+
+[[package]]
+name = "door9"
 version = "0.1.0"
